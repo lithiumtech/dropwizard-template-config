@@ -3,7 +3,7 @@
 
     <groupId>de.thomaskrille</groupId>
     <artifactId>dropwizard-template-config</artifactId>
-    <version>1.4.1-SNAPSHOT</version>
+    <version>1.4.0.1-SNAPSHOT</version>
 
     <name>Dropwizard Template Configuration</name>
     <description>
@@ -25,27 +25,35 @@
     </developers>
 
     <scm>
-        <connection>https://github.com/tkrille/dropwizard-template-config.git</connection>
-        <developerConnection>scm:git:git@github.com:tkrille/dropwizard-template-config.git</developerConnection>
-        <url>https://github.com/tkrille/dropwizard-template-config</url>
+        <connection>https://github.com/lithiumtech/dropwizard-template-config.git</connection>
+        <developerConnection>scm:git:git@github.com:lithiumtech/dropwizard-template-config.git</developerConnection>
+        <url>https://github.com/lithiumtech/dropwizard-template-config</url>
         <tag>HEAD</tag>
     </scm>
     <issueManagement>
         <system>GitHub</system>
-        <url>https://github.com/tkrille/dropwizard-template-config/issues</url>
+        <url>https://github.com/lithiumtech/dropwizard-template-config/issues</url>
     </issueManagement>
     <distributionManagement>
         <snapshotRepository>
-            <id>ossrh</id>
-            <name>Sonatype Nexus Snapshots</name>
-            <url>http://oss.sonatype.org/content/repositories/snapshots</url>
+            <id>lithium-snapshots</id>
+            <name>nexus-maven-repo</name>
+            <url>http://nexus.dev.lithium.com/nexus/content/repositories/snapshots</url>
         </snapshotRepository>
         <repository>
-            <id>ossrh</id>
-            <name>Nexus Release Repository</name>
-            <url>http://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+            <id>lithium-releases</id>
+            <name>nexus-maven-repo</name>
+            <url>http://nexus.dev.lithium.com/nexus/content/repositories/releases</url>
         </repository>
     </distributionManagement>
+    <repositories>
+        <repository>
+            <id>lithium-internal-nexus</id>
+            <name>nexus-maven-repo</name>
+            <url>http://nexus.dev.lithium.com/nexus/content/repositories/releases</url>
+            <snapshots><enabled>false</enabled></snapshots>
+        </repository>
+    </repositories>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
