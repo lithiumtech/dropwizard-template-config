@@ -64,7 +64,7 @@
         <dependency>
             <groupId>io.dropwizard</groupId>
             <artifactId>dropwizard-core</artifactId>
-            <version>0.9.2</version>
+            <version>1.2.2</version>
             <scope>provided</scope>
         </dependency>
 
@@ -77,7 +77,7 @@
         <dependency>
             <groupId>io.dropwizard</groupId>
             <artifactId>dropwizard-testing</artifactId>
-            <version>0.9.2</version>
+            <version>1.2.2</version>
             <scope>test</scope>
         </dependency>
 
@@ -110,14 +110,14 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.2</version>
                 <configuration>
-                    <source>1.7</source>
-                    <target>1.7</target>
+                    <source>1.8</source>
+                    <target>1.8</target>
                 </configuration>
             </plugin>
 
             <plugin>
                 <artifactId>maven-release-plugin</artifactId>
-                <version>2.5.1</version>
+                <version>2.5.2</version>
                 <configuration>
                     <tagNameFormat>v@{project.version}</tagNameFormat>
                     <preparationGoals>clean test</preparationGoals>
@@ -259,20 +259,6 @@
                                 <id>attach-javadocs</id>
                                 <goals>
                                     <goal>jar</goal>
-                                </goals>
-                            </execution>
-                        </executions>
-                    </plugin>
-
-                    <plugin>
-                        <artifactId>maven-gpg-plugin</artifactId>
-                        <version>1.6</version>
-                        <executions>
-                            <execution>
-                                <id>sign-artifacts</id>
-                                <phase>verify</phase>
-                                <goals>
-                                    <goal>sign</goal>
                                 </goals>
                             </execution>
                         </executions>
