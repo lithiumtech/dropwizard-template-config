@@ -13,6 +13,6 @@ public interface TemplateConfigProvider {
     /**
      * @return A data model that the freemarker engine will use when parsing the config template.
      */
-    Map<String, String> getDataModel();
+    Map<String, Object> getDataModel();
 
 }

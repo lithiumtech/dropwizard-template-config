@@ -5,7 +5,7 @@ import java.util.Map;
 
 public class TestCustomProvider implements TemplateConfigProvider {
     private final String namespace;
-    private final Map<String, String> data = new HashMap<>();
+    private final Map<String, Object> data = new HashMap<>();
 
     public TestCustomProvider(String namespace) {
         this.namespace = namespace;
@@ -21,7 +21,7 @@ public class TestCustomProvider implements TemplateConfigProvider {
     }
 
     @Override
-    public Map<String, String> getDataModel() {
+    public Map<String, Object> getDataModel() {
         return this.data;
     }
 }
